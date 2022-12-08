@@ -7,7 +7,7 @@ import { SideBarComponentSettings } from '../SidebarComponentSettings'
 function BuilderSideBar ({ selectedComponent }) {
   const contrastBg = useColorModeValue(colors.light.contrastBg, colors.dark.contrastBg)
 
-  const { id, type, name, x, y, z, width, height, data } = selectedComponent || {}
+  const { id, type, name, z, data } = selectedComponent || {}
 
   const { updateNodeById } = useBuilderFlow()
 
