@@ -5,7 +5,8 @@ function mqttConnect () {
   // Fetch the hostname/IP address and port number from the form
   host = document.getElementById('host').value
   port = document.getElementById('port').value
-
+  useSSL = document.getElementById('useSSL').checked
+  console.log('useSSL: ' + useSSL)
   // Print output for the user in the messages div
   document.getElementById('messages').innerHTML += '<span>Connecting to: ' + host + ':' + port + '</span><br/>'
   document.getElementById('messages').innerHTML += '<span>Using the following client value: ' + clientID + '</span><br/>'
@@ -14,7 +15,8 @@ function mqttConnect () {
   client = new Paho.MQTT.Client(host, Number(port), clientID)
   const options = {
     timeout: 3,
-    onSuccess: onConnect
+    onSuccess: onConnect,
+    useSSL
   }
 
   // Set callback handlers
