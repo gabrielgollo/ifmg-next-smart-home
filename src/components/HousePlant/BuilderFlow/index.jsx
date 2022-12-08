@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react'
 import { Rnd } from 'react-rnd'
 import { Button, Stack } from '@chakra-ui/react'
@@ -29,9 +30,7 @@ function BuilderFlow () {
   }
 
   const handleDragging = (e, d) => {
-    // console.log('dragging')
-    // console.log(e)
-    // console.log(d)
+    console.log(e)
   }
 
   const nodeViewArea = 10

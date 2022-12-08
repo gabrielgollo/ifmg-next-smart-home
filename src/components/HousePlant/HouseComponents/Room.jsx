@@ -6,7 +6,7 @@ import { Rnd } from 'react-rnd'
 import MappedComponents from '../MappedComponents'
 
 function Room ({ component }) {
-  const { width = 10, height = 10, x = 0, y = 0, name = 'Room', data = { components: [] } } = component
+  const { width = 10, height = 10, name = 'Room', data = { components: [] } } = component
   return (
       <div
         style={{
@@ -25,7 +25,7 @@ function Room ({ component }) {
           </Text>
           <Box>
             {data.components.map((childComponent, index) => {
-              const { id, type, name, x, y, width, height, data } = childComponent
+              const { type, x, y, width, height } = childComponent
               const Component = MappedComponents[type]
 
               return (

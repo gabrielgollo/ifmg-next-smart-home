@@ -40,6 +40,7 @@ export function SideBarComponentSettings ({ id, type, data }) {
 }
 
 SideBarComponentSettings.propTypes = {
+  id: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired
 }

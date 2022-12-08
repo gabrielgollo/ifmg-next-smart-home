@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Footer from '@/components/Footer'
 import { NavigationBar } from '@/components/NavigationBar'
 import Section from '@/components/Section'
-
+import PropTypes from 'prop-types'
 export default function Layout ({ children }) {
   return (
     <Box as="main" pb="8">
@@ -19,4 +19,8 @@ export default function Layout ({ children }) {
       </Container>
     </Box>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node
 }
